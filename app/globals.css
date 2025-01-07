@@ -2,20 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body{
+  @apply font-primary bg-primary text-white leading-loose;
   }
+  .h1{
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+  .h2{
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+  .h3{
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+  .text-outline{
+    -webkit-text-stroke: 1px #ffffff;
+  }
+  .text-outline-hover{
+    -webkit-text-stroke: 1px #00ff99;
+  }
+  .category-container {
+    margin-bottom: 50px; /* Adds space between categories */
+  }
+  
+  .category-header {
+    margin-bottom: 20px; /* Space between category title and skills */
+    font-size: 1.5rem; /* Adjust font size for better readability */
+    font-weight: 700;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 30px; /* Adds spacing between skill items */
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .skill-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background-color: #232329;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .skill-item:hover {
+    transform: scale(1.1); /* Add hover effect for interactivity */
+  }
+  
+  .tooltip-content {
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+  
+  
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
