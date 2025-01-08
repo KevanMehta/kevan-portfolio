@@ -70,7 +70,7 @@ const Projects = [
     title:"Paisa Tips",
     description:"It is a static blog page which provides infomation about stock market, crypto and tips to save tax and information regarding the accounting",
     stack:[{name:"HTML 5"}, {name:"Css 3"}, {name:"BootStrap"}, {name:"JavaScript"} ],
-    image:"/assets/work/Paisa_Tips.png",
+    image:"/assets/work/Paisa_tips.png",
     live:"",
     github:"https://github.com/KevanMehta/paisatips/tree/main",
   },
